@@ -1,0 +1,13 @@
+{
+  "name": "aws-lambda-ssm-extension-test",
+  "version": "1.0.0",
+  "description": "Test app that demos the ssm param extension provided by AWS",
+  "main": "src/index.js",
+  "repository": "https://github.com/Danwakeem/aws-lambda-ssm-extension-test",
+  "author": "Danwakeem",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "deploy": "sls deploy"
+  }
+}
