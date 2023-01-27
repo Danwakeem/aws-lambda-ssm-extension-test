@@ -1,9 +1,7 @@
 const ssm = require('./services/ssm')();
 
-module.exports.handler = async (event) => {
+module.exports.handler = async () => {
   const param = await ssm.getLocalParameter('/demo/param');
-
-  console.log(param);
 
   return {
     statusCode: 200,
