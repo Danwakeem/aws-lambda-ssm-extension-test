@@ -8,6 +8,12 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "deploy": "sls deploy"
+    "deploy": "sls deploy",
+    "deploy:ssmTest": "sls deploy function -f ssmTest",
+    "invoke:ssmTest": "sls invoke --function ssmTest",
+    "ssm:update": "oprah run"
+  },
+  "devDependencies": {
+    "serverless": "^3.27.0"
   }
 }

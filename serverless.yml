@@ -11,14 +11,14 @@ provider:
   logRetentionInDays: 1
   region: us-east-1
   environment:
-    SSM_PARAMETER_STORE_TTL: 10
-    PARAMETERS_SECRETS_EXTENSION_HTTP_PORT: 2773
+    SSM_PARAMETER_STORE_TTL: 60
+    PARAMETERS_SECRETS_EXTENSION_HTTP_PORT: 9876
   iam:
     role:
       statements:
         - Effect: Allow
           Action:
-            - ssm:GetParameters
+            - ssm:GetParameter
             - kms:Decrypt
           Resource: '*'
 
@@ -27,4 +27,4 @@ functions:
     handler: src/index.handler
     timeout: 30
     layers:
-      - arn:aws:lambda:us-east-2:590474943231:layer:AWS-Parameters-and-Secrets-Lambda-Extension:2
+      - arn:aws:lambda:us-east-1:177933569100:layer:AWS-Parameters-and-Secrets-Lambda-Extension:2

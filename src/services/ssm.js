@@ -10,6 +10,7 @@ const SSM = () => {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
+        'X-Aws-Parameters-Secrets-Token': process.env.AWS_SESSION_TOKEN,
       },
     };
 
